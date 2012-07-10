@@ -32,3 +32,9 @@ for (var water = 0; water < 41; water+=4){
 };
 console.log("No more water to extract.");
 
+// String Function
+
+var jobDone = "The job is done "
+var lookingForPayment = " the carpet cleaners are looking for payment."
+console.log(jobDone + "and" + lookingForPayment)
+
