@@ -23,14 +23,20 @@ noAction = "No water can be found.";
 }console.log("The carpet cleaners arrive at the residents apartment, and begin extraction the water from the carpet.");
 
 // Number Function
-// For Loop
+// While Loop
 
-var minutes = 0
-for (var water = 0; water < 41; water+=4){
-	if ( water >= 0 ) {minutes+=5};
+var water = 0,
+	minutes = 0
+;
+while (water < 40) {
 	console.log("The carpet cleaners extracted " + water + " gallons of water, for " + minutes + " minutes.");
-};
+	water+=4;
+	minutes+=5;
+}
+
 console.log("No more water to extract.");
+
+
 
 // String Function
 
@@ -38,3 +44,24 @@ var jobDone = "The job is done "
 var lookingForPayment = " the carpet cleaners are looking for payment."
 console.log(jobDone + "and" + lookingForPayment)
 
+// Array Function
+
+var payment1 = "Create a purchase order.",
+	payment2 = "Use petty cash.",
+	payment3 = "Charge the resident."
+;
+
+var payments = [
+	"Create a purchase order.", 
+	"Use petty cash.", 
+	"Charge the resident."
+];
+
+// payments[0]
+
+console.log ( payments[0] ); 
+
+// for (var water = 0; water < 41; water+=4){
+// 	if ( water >= 0 ) {minutes+=5};
+// 	console.log("The carpet cleaners extracted " + water + " gallons of water, for " + minutes + " minutes.");
+// };
