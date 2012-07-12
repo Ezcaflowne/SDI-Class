@@ -8,7 +8,7 @@
 
 var newWaterHeater = true;
 var noAction = true
-var total = 50;
+var total = 40;
 
 console.log('\"A resident calls and puts in a work order.\"')
 
