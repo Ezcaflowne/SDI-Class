@@ -1,9 +1,9 @@
 // alert("JavaScript works!");
 
 // Name: Willson Ayotte
-// Date: July 10th, 2012
+// Date: July 12th, 2012
 // Document: Deliverable 2
-// Description: A day at the office
+// Description: 24 hour emergency
 
 
 var newWaterHeater = true;
@@ -24,11 +24,11 @@ var getWorkRequest = function(workorder) {
 // String Varible
 var waterHeater = function(whatYouNeed) {
     if (newWaterHeater === true) {
-        theNeed = "I see some water leaking on the floor. It looks like you need a " + whatYouNeed;
+        theIssue = "I see some water leaking on the floor. It looks like you need a " + whatYouNeed;
     } else {
-        theNeed = "Hmmm... I dont see any water, I think it might be a something else.";
+        theIssue = "Hmmm... I dont see any water, I think it might be a something else.";
     };
-    return theNeed;
+    return theIssue;
 }; // End String Varible
 
 // Boolean Function
@@ -67,7 +67,7 @@ var thingsIBringToWork = function (items, specificThing) {
 		return items[specificThing];
 }; // End Array Function
 
-console.log('\"A resident calls the after hours emergency phone number saying he has a problem with his water heater.\"')
+console.log('\"A resident calls the after hours emergency phone number saying that he has a problem with his water heater.\"')
 
 console.log ("When I leave for work, I bring with me my ")
 console.log (thingsIBringToWork(workArray, numberArray) + " at home.");
