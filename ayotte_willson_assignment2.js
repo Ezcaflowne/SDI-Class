@@ -83,35 +83,3 @@ if (wet(noAction) === true) {
 }
 
 console.log (work(total) + " gallons of water has been extracted from the carpet.");
-
-
-
-
-
-
-
-
-
-
-// console.log("The carpet cleaners arrive at the residents apartment, and begin extraction the water from the carpet.");
-
-
-// // String Function
-// var jobDone = "The job is done "
-// var lookingForPayment = " the carpet cleaners are looking for payment."
-// console.log(jobDone + "and" + lookingForPayment)
-
-// // Array Function
-// // For Loop
-// var payments = [
-// 	"Log on to the computer,", 
-// 	"Create a purchase order,", 
-// 	"Give carpet cleaners the PO number",
-// 	"The transaction is complete."
-// ];
-
-// for (var i=0, p=payments.length; i < p; i++) {
-// 	console.log( payments[i] )
-// }
-
-// console.log("Now its time to kick back for a job well done.");
