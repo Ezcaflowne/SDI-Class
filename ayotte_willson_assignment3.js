@@ -55,17 +55,21 @@ var toolsBladeGood = function(bladeGood) {
     }
 };
 
+var toolsItWorks = function (itWork) {
+    
+}
+
 
 var workInApartment = function (time) {
     
-    var timeTillDone = 100;
-    var start = 0;
+    var timeTillDone = 90;
+    var time = 0;
     while(time < timeTillDone) {
         console.log( "We have been working for " + time + " minuates." );
-        time+=5;
-        start++
+        time += 10;
+        time++
     }
-    return start
+    return time
 };
 ///// ENDED HERE
 
@@ -75,7 +79,7 @@ var coWorkersArray = ["Perry", " Manny", " Edgar"],
     coWorkerDayOff = 2,
     charger = false,
     battery = true,
-    time = 200;
+    time = 90;
 
 console.log("My co workers are " + coWorkersArray);
 
@@ -99,6 +103,8 @@ console.log("Both " + tools.brand + " tool sets contain a " + tools.typeOfTools 
 console.log("That's probably why my battery is dead...");
 
 toolsBladeGood(tools.areBladesGood);
+
+console.log(workInApartment(time) +  " minuates we have been working in this apartment.");
 
 
 
