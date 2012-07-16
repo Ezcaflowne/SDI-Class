@@ -18,20 +18,27 @@ var tools = {
     }
 };
 
+
+
 var goToWork = function () {
         console.log("Sunday through Thursday i wake up at 7:30AM, to make it to work by 8:00AM.");
 };
 
+goToWork();
 
-
-var maintenanceCoWorkers = function (coWorkers, dayOff) {
-    for (var i = 0, c = coWorkers.length; i < c; i++) {
+var maintenanceCoWorkers = function (coWorkers, dayOff) 
+{
+    for (var i = 0, c = coWorkers.length; i < c; i++) 
+    {
         var workers = coWorkers[i];
-            console.log(workers);
-    }   return coWorkers[dayOff]
+    }   
+    return coWorkers[dayOff];
 };
 
+
+
 var bringNewBattery = function (charger, battery) {
+    
     var getBattery;
     if (charger === true && batter === true) {
         getBattery = true;
@@ -42,6 +49,31 @@ var bringNewBattery = function (charger, battery) {
 
 
 
+var workInApartment = function (time) {
+    
+    var timeTillDone = 100;
+    var start = 0;
+    while(time < timeTillDone) {
+        console.log( "We have been working for " + time + " minuates." );
+        time+=5;
+        start++
+    }
+    return start
+};
+///// ENDED HERE
 
 
-goToWork();
+// Global Varibles
+var coWorkersArray = ["Perry", " Manny", " Edgar"],
+    coWorkerDayOff = 2,
+    supervisorYes = true,
+    toolsYes = false,
+    time = 200;
+
+    console.log("My co workers are " + coWorkersArray);
+
+    console.log("My supervisor just told me that" + maintenanceCoWorkers(coWorkersArray, coWorkerDayOff)
+    + " is attending his english speaking class today, and will not be in to work today.");
+
+    console.log(coWorkersArray[1] + ", could you go to the key shop and bring me a new battry?" + coWorkersArray[1] + ' says, \"Sure!\"');
+
