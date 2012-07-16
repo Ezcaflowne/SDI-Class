@@ -10,7 +10,8 @@ var tools = {
     brand: "Ryobi",
     model: "18v",
     battery: "Lithium Ion",
-    typeOfTools: ["Drill", "Sawz-all", "Circular Saw"],
+    old: "Nicad",
+    typeOfTools: ["Drill ", "Sawz-all ", "and a Circular Saw"],
     doesItWork: true,
     areBladesGood: true,
     work: function (apt) {
@@ -73,7 +74,7 @@ var coWorkersArray = ["Perry", " Manny", " Edgar"],
 console.log("My co workers are " + coWorkersArray);
 
 console.log("My supervisor just told me that" + maintenanceCoWorkers(coWorkersArray, coWorkerDayOff)
-+ " is attending his english speaking class today, and will not be in to work today.");
+    + " is attending his english speaking class today, and will not be in to work today.");
 
 console.log(coWorkersArray[1] + ", could you go to the key shop and bring me a new battry?" + coWorkersArray[1] + ' says, \"Sure!\"');
 
@@ -83,5 +84,11 @@ if(bringNewBattery(charger, battery) === true) {
         console.log(coWorkersArray[1] + ' says, your charger wasn\'t plugging in, I don\'t have a battery for you..."');
 };
 
+console.log("I really like my new " + tools.brand +" " + tools.model + tools.battery + " set.");
+console.log("My supervisor " + coWorkersArray[0] + " has the same " + tools.brand + tools.model + " set, but he has the older " 
+    + tools.old + " batteries and they dont last nearly as long.");
 
+console.log("Both " + tools.brand + " tool sets contain a " + tools.typeOfTools + " so i always find him with my " + tools.battery
+    + " batteries in his tools.");
+console.log("That's probably why my battery is dead...");
 
