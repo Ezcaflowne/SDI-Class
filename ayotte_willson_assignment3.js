@@ -12,12 +12,11 @@ var tools = {
     battery: "Lithium Ion",
     old: "Nicad",
     typeOfTools: ["Drill ", "Sawz-all ", "and a Circular Saw."],
-    doesItWork: true,
     areBladesGood: true,
     work: function (apt) {
         console.log("Today we will be working in apt " + apt);
     }
-};
+}; // End Global Object
 
 
 
@@ -25,7 +24,6 @@ var goToWork = function () {
         console.log("Sunday through Thursday i wake up at 7:30AM, to make it to work by 8:00AM.");
 };
 
-goToWork();
 
 var maintenanceCoWorkers = function (coWorkers, dayOff) {
     for (var i = 0, c = coWorkers.length; i < c; i++) {
@@ -35,9 +33,7 @@ var maintenanceCoWorkers = function (coWorkers, dayOff) {
 };
 
 
-
 var bringNewBattery = function (charger, battery) {
-    
     var getBattery;
     if (charger === true && battery === true) {
         getBattery = true;
@@ -55,31 +51,38 @@ var toolsBladeGood = function(bladeGood) {
     }
 };
 
-var toolsItWorks = function (itWork) {
-    
-}
-
-
-var workInApartment = function (time) {
-    
+var workInApartment = function (timeInApt) {
     var timeTillDone = 90;
-    var time = 0;
-    while(time < timeTillDone) {
-        console.log( "We have been working for " + time + " minuates." );
-        time += 10;
-        time++
+    var timeInApt = 0;
+    while(timeInApt < timeTillDone) {
+        console.log( "We have been working for " + timeInApt + " minuates." );
+        timeInApt += 10;
+        timeInApt++
     }
-    return time
+    return timeInApt
 };
-///// ENDED HERE
+
+
+var aptsStillToTurn = function (json) {
+    for (var i = 0; i < json.apartments.length; i++) {
+        var apartments = json.apartments[i];
+        console.log("Apartment Number: " + apartments.number + ", Type: " + apartments.type + ", Date to be ready: "
+        + apartments.ready);  
+    }
+};
 
 
 // Global Varibles
 var coWorkersArray = ["Perry", " Manny", " Edgar"],
     coWorkerDayOff = 2,
+    groundsWork = "we'll have more help picking up trash off the grounds."
     charger = false,
     battery = true,
-    time = 90;
+    timeInApt = 90
+; // End Global Varibles
+
+
+goToWork();
 
 console.log("My co workers are " + coWorkersArray);
 
@@ -104,8 +107,11 @@ console.log("That's probably why my battery is dead...");
 
 toolsBladeGood(tools.areBladesGood);
 
-console.log(workInApartment(time) +  " minuates we have been working in this apartment.");
+console.log(workInApartment(timeInApt) +  " minuates we have been working in this apartment.");
 
+console.log(coWorkersArray[0] + ' says, "Great job today guys, you guys worked very hard." '
++ '"Over the next few day\'s we will be working in these apartments..."');
 
+aptsStillToTurn(json);
 
-
+console.log("As soon as" + coWorkersArray[2] + " comes back " + groundsWork);
