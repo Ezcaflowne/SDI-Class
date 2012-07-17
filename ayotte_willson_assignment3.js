@@ -5,6 +5,19 @@
 // Document: 1207 Scalable Data Infrastructures
 // Description: A Day at the Office
 
+
+// Global Varibles
+var coWorkersArray = ["Perry", " Manny", " Edgar"],
+    coWorkerDayOff = 2,
+    groundsWork = "we'll have more help picking up trash off the grounds."
+    charger = false,
+    battery = true,
+    timeInApt = 90
+    bladeGood = "Ahh, new blades also make the work go a lot smoother, "
+    bladeBad = "compaired to dull blades."
+; // End Global Varibles
+
+
 // Global Object
 var tools = {
     brand: "Ryobi",
@@ -27,7 +40,6 @@ var goToWork = function () {
 
 var maintenanceCoWorkers = function (coWorkers, dayOff) {
     for (var i = 0, c = coWorkers.length; i < c; i++) {
-        var workers = coWorkers[i];
     }   
     return coWorkers[dayOff];
 };
@@ -43,12 +55,8 @@ var bringNewBattery = function (charger, battery) {
 };
 
 
-var toolsBladeGood = function(bladeGood) {
-    if (bladeGood === true) { 
-        console.log("Ahh, new blades also make the work go a lot smoother.");
-    } else {
-        console.log("Damn! My blade is shot, first my battery and now this. It's not going to be a very productive day.");
-    }
+var toolsBladeGood = function(good,bad) {
+     return good + bad;
 };
 
 var workInApartment = function (timeInApt) {
@@ -70,16 +78,6 @@ var aptsStillToTurn = function (json) {
         + apartments.ready);  
     }
 };
-
-
-// Global Varibles
-var coWorkersArray = ["Perry", " Manny", " Edgar"],
-    coWorkerDayOff = 2,
-    groundsWork = "we'll have more help picking up trash off the grounds."
-    charger = false,
-    battery = true,
-    timeInApt = 90
-; // End Global Varibles
 
 
 goToWork();
@@ -105,7 +103,8 @@ console.log("Both " + tools.brand + " tool sets contain a " + tools.typeOfTools 
     + " batteries in his tools.");
 console.log("That's probably why my battery is dead...");
 
-toolsBladeGood(tools.areBladesGood);
+////// Insert String Here ////////
+console.log(toolsBladeGood(bladeGood, bladeBad))
 
 console.log(workInApartment(timeInApt) +  " minuates we have been working in this apartment.");
 
@@ -114,4 +113,4 @@ console.log(coWorkersArray[0] + ' says, "Great job today guys, you guys worked v
 
 aptsStillToTurn(json);
 
-console.log("As soon as" + coWorkersArray[2] + " comes back " + groundsWork);
+console.log("As soon as" + coWorkersArray[2] + " comes back tomorrow " + groundsWork);
