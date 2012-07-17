@@ -12,8 +12,9 @@ var coWorkersArray = ["Perry", " Manny", " Edgar"],
     groundsWork = "we'll have more help picking up trash off the grounds."
     charger = false,
     battery = true,
-    timeInApt = 90
-    bladeGood = "Ahh, new blades also make the work go a lot smoother, "
+    timeInApt = 90,
+    apt = 2117,
+    bladeGood = "Ahh, new blades also make the work go a lot smoother, ",
     bladeBad = "compaired to dull blades."
 ; // End Global Varibles
 
@@ -58,6 +59,8 @@ var bringNewBattery = function (charger, battery) {
 var toolsBladeGood = function(good,bad) {
      return good + bad;
 };
+
+
 
 var workInApartment = function (timeInApt) {
     var timeTillDone = 90;
@@ -105,6 +108,8 @@ console.log("That's probably why my battery is dead...");
 
 ////// Insert String Here ////////
 console.log(toolsBladeGood(bladeGood, bladeBad))
+
+tools.work(apt)
 
 console.log(workInApartment(timeInApt) +  " minuates we have been working in this apartment.");
 
