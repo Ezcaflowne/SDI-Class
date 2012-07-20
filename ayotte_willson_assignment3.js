@@ -83,7 +83,7 @@ var aptsStillToTurn = function (json) {
 
 
 
-// Call Go To Work Procedure
+// Call Go To Work Procedure //
 goToWork();
 
 console.log("My co workers are " + coWorkersArray);
@@ -107,9 +107,9 @@ console.log("Both " + tools.brand + " tool sets contain a " + tools.typeOfTools 
     + " batteries in his tools.");
 console.log("That's probably why my battery is dead...");
 
-// Call String Function //
+// Call String Function object argument//
 console.log(toolsBladeGood(bladeGood, bladeBad))
-// Call Method work //
+// Call Method work, mutator + procedure method//
 tools.work(apt)
 // Call Number While Loop Function //
 console.log(workInApartment(timeInApt) +  " minuates we have been working in this apartment.");
