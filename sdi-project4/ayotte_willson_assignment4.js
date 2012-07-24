@@ -61,8 +61,6 @@ var myLibrary = function () {
 	///////////////////////////////////////////////////
 
 
-	var aNumber = 2.1;
-
 	var getDecimal = function (aNumber) {
 		var format = aNumber.toFixed(2);
 		return format;
@@ -72,13 +70,46 @@ var myLibrary = function () {
 	// End format number to specific decimal place //
 	/////////////////////////////////////////////////
 
+
+	//////////////////////////////
+	// Start string to a number //
+	//////////////////////////////
+
+
+	var stringToNumber = function (stringNumber) {
+		var aRealNumber = parseInt(stringNumber);
+		return aRealNumber;
+	};
+
+	////////////////////////////
+	// End string to a number //
+	////////////////////////////
+
+
+	//////////////////////////////////////////////////////////
+	// Start Title-case a string into Uppercase first words //
+	//////////////////////////////////////////////////////////
+
+	var titleCase = function (aString) {
+		return aString.toLowerCase().replace(/^(.)|\s(.)/g,
+		function ($1) { return $1.toUpperCase();} );
+		return titleCase;
+	};
+
+	////////////////////////////////////////////////////////
+	// End Title-case a string into Uppercase first words //
+	////////////////////////////////////////////////////////
+
+
 // End of Number // 
 
 	/// Returned values from functions inside library
 	return {
 		"isItAPhoneNumber":isItAPhoneNumber, //// Return for Verify phone number function ////
 		"emailAddress":emailAddress, 		 //// Return for Verify of email function ////
-		"getDecimal":getDecimal 			 //// Return for Format number to specific decimal place ////
+		"getDecimal":getDecimal, 			 //// Return for Format number to specific decimal place ////
+		"stringToNumber":stringToNumber, 	 //// Return for String to a number ////
+		"titleCase":titleCase 				 //// Return for Title-case a string into Uppercase First words ////
 	};
 
 
@@ -91,12 +122,16 @@ var newLib = new myLibrary();
 /// Label what your calling here. ///
 /// Logging of each function to check if they are working. ///
 	
-	/// Loggin Phone Number Verify ///
+	/// Logging Phone Number Verify ///
 	console.log(newLib.isItAPhoneNumber("702-324-4586"));
-	/// Loggin Email Address Verify ///
+	/// Logging Email Address Verify ///
 	console.log(newLib.emailAddress("ezcaflowne@fullsail.edu"));
-	/// Loggin Format Number to Specific Decimal Places //
+	/// Logging Format Number to Specific Decimal Places //
 	console.log(newLib.getDecimal(2.1));
+	/// Logging String to a Number ///
+	console.log(newLib.stringToNumber("42"));
+	/// Logging Title-case a String into Uppercase First Words ///
+	console.log(newLib.titleCase("This shit is driving me crazy!!"))
 
 
 
