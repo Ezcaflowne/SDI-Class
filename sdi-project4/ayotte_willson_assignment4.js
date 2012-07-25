@@ -57,13 +57,13 @@ var myLibrary = function () {
 	////////////////////////////////////////
 
 
-	var urlAddress = function (url) {
-		var urlCheck = /^(http[s]?:\/\/){0,1}([a-zA-Z]{2,5})[\.]{0,1}/;
+	var urlAddress = function (url) { /// Found regex @ http://regexlib.com/ ///
+		var urlCheck = /(http:\/\/|https:\/\/)(www\.)?([^\.]+)\.(\w{2}|(com|net|org|edu|int|mil|gov|arpa|biz|aero|name|coop|info|pro|museum))$/gim;
 			if (url.match(urlCheck)) {
 				urlIsGood = url + " :is a valid URL.";
 				return urlIsGood;
 			} else {
-				urlNotGood = url + ": is not a valid URL, please use http:// or https:// format.";
+				urlNotGood = url + ": is not a valid URL, please use http://xxx.xxx.xxx or https://xxx.xxx.xxx format.";
 				return urlNotGood;
 			} 
 	};
@@ -87,6 +87,21 @@ var myLibrary = function () {
 	// End Title-case a string into Uppercase first words //
 	////////////////////////////////////////////////////////
 
+
+	////////////////////////////////////////////////////////////
+	// Start change string seperator from "a,b,c" to "a/b/c/" //
+	////////////////////////////////////////////////////////////
+
+
+	var changeSeperator = function (format) {
+		var newFormat = format.replace(/,/g,"/");
+		return newFormat;
+	};
+
+	//////////////////////////////////////////////////////////
+	// End change string seperator from "a,b,c" to "a/b/c/" //
+	//////////////////////////////////////////////////////////
+
 // End of Strings //
 
 
@@ -107,6 +122,33 @@ var myLibrary = function () {
 	/////////////////////////////////////////////////
 
 
+	/////////////////////////////////////////////////////////////////////////////////////////////////
+	// Start fuzzy-match a number: is the number above or below a number within a certain percent? //
+	/////////////////////////////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////////////////////
+	// End fuzzy-match a number: is the number above or below a number within a certain percent? //
+	///////////////////////////////////////////////////////////////////////////////////////////////
+
+
+	/////////////////////////////////////////////
+	// Start days difference between two dates //
+	/////////////////////////////////////////////
+
+
+	var dayDifference = function (bornDate, todayDate) {
+		var aDay = 1000*60*60*24;
+		var bornDate = new Date(1983, 9, 11);
+		var todayDate = new Date();
+		var math = (Math.ceil((todayDate.getTime() - bornDate.getTime())/(aDay)) + 
+			" days have gone by from " + bornDate + " to " + todayDate + ".");
+		return math;
+	};
+
+	///////////////////////////////////////////
+	// End days difference between two dates //
+	///////////////////////////////////////////
+
+	
 	//////////////////////////////
 	// Start string to a number //
 	//////////////////////////////
@@ -124,6 +166,14 @@ var myLibrary = function () {
 // End of Number // 
 
 // Start of Array //
+
+	///////////////////////////////////////////////////////////////////////////////////
+	// Start find the smallest value in an array that is greater than a given number //
+	///////////////////////////////////////////////////////////////////////////////////
+	/////////////////////////////////////////////////////////////////////////////////
+	// End find the smallest value in an array that is greater than a given number //
+	/////////////////////////////////////////////////////////////////////////////////
+
 
 	//////////////////////////////////////////////
 	// Start total value of numbers in an Array //	
@@ -168,10 +218,10 @@ var myLibrary = function () {
 		"emailAddress":emailAddress, 		 //// Return for Verify of email function ////
 		"urlAddress":urlAddress, 			 //// Return for Verify URL address function ////
 		"titleCase":titleCase, 				 //// Return for Title-case a string into Uppercase First words ////
-		//// Needs String list of things. Example "a,b,c" to "a/b/c"
+		"changeSeperator":changeSeperator, 	 //// Return for Change string seperator from "a,b,c" to "a/b/c/" ////
 		"getDecimal":getDecimal, 			 //// Return for Format number to specific decimal place ////
 		//// Need Fuzzy-match number: number above or below a certain percent
-		//// Need Find number of hours or days between two dates.
+		"dayDifference":dayDifference, 		 //// Return for Find number of hours or days between two dates. ////
 		"stringToNumber":stringToNumber,	 //// Return for String to a number ////
 		//// Need Find smallest value in a array that is greater than a given number.
 		"totalValueArray":totalValueArray, 	 //// Return for Total value of numbers in an array ////
@@ -197,10 +247,18 @@ var newLib = new myLibrary();
 	console.log(newLib.urlAddress("http://www.facebook.com"));
 	/// Logging Title-case a String into Uppercase First Words ///
 	console.log(newLib.titleCase("This shit is driving me crazy!!"));
+	/// Logging Change String Seperator from "a,b,c" to "a/b/c/" ///
+	console.log(newLib.changeSeperator("a,b,c"));
 	/// Logging Format Number to Specific Decimal Places ///
 	console.log(newLib.getDecimal(2.1));
+	/// Logging
+	
+	/// Logging Find Number of Hours or Days Between Two Dates. ///
+	console.log(newLib.dayDifference());
 	/// Logging String to a Number ///
 	console.log(newLib.stringToNumber("42"));
+	/// Logging Find the Smallest Value in an Array that is Greater than a Given Number ///
+
 	/// Logging Total Value of Objects in an Array ///
 	console.log(newLib.totalValueArray([1, 2, 5, 7, 9, 3]));
 	/// Logging Order of Objects - Of Marines :) ///
