@@ -268,5 +268,3 @@ var newLib = new myLibrary();
 		{ Name: "Garcia",    MOS: 1312 }
 		])
 	);
-
-	
