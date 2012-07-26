@@ -135,12 +135,12 @@ var myLibrary = function () {
 	/////////////////////////////////////////////
 
 
-	var dayDifference = function (bornDate, todayDate) {
+	var dayDifference = function (bornDate, sonBornDate) {
 		var aDay = 1000*60*60*24;
-		var bornDate = new Date(1983, 9, 11);
-		var todayDate = new Date();
-		var math = (Math.ceil((todayDate.getTime() - bornDate.getTime())/(aDay)) + 
-			" days have gone by from " + bornDate + " to " + todayDate + ".");
+		var bornDate = new Date(1983, 8, 11);
+		var sonBornDate = new Date(2006, 3, 6);
+		var math = ("There is " + Math.ceil((sonBornDate.getTime() - bornDate.getTime())/(aDay)) + 
+			" days between my birthday: " + bornDate + " to my son's birthday: " + sonBornDate + ".");
 		return math;
 	};
 
@@ -185,7 +185,7 @@ var myLibrary = function () {
 		for (var i = 0, x = numberArray.length; i < x; i++) {
 			total += numberArray[i];
 		} return total;
-	}
+	};
 
 	///////////////////////////////////////////
 	// End total vale of numbers in an Array //
@@ -227,9 +227,9 @@ var myLibrary = function () {
 		"totalValueArray":totalValueArray, 	 //// Return for Total value of numbers in an array ////
 		"randomObjects":randomObjects   	 //// Retrun for Order of objects /////
 	};
-
-
 };
+
+
 
 /// Make a seperate function that accesses that library ///
 var newLib = new myLibrary();
@@ -251,14 +251,14 @@ var newLib = new myLibrary();
 	console.log(newLib.changeSeperator("a,b,c"));
 	/// Logging Format Number to Specific Decimal Places ///
 	console.log(newLib.getDecimal(2.1));
-	/// Logging
-	
+	/// Logging Fuzzy-match a Number: Is the Number Above or Below a Number Within a Certain Percent? ///
+	console.log("Couldnt figure this out...")
 	/// Logging Find Number of Hours or Days Between Two Dates. ///
 	console.log(newLib.dayDifference());
 	/// Logging String to a Number ///
 	console.log(newLib.stringToNumber("42"));
 	/// Logging Find the Smallest Value in an Array that is Greater than a Given Number ///
-
+	console.log("Couldnt figure this out...")
 	/// Logging Total Value of Objects in an Array ///
 	console.log(newLib.totalValueArray([1, 2, 5, 7, 9, 3]));
 	/// Logging Order of Objects - Of Marines :) ///
